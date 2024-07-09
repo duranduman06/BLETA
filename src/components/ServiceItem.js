@@ -1,7 +1,6 @@
 
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { PhoneHeight, PhoneWidth } from '../constants/config';
 
 const ServiceItem = ({ service }) => {
@@ -19,14 +18,15 @@ export default ServiceItem;
 
 const styles = StyleSheet.create({
     serviceItem: {
-        height: PhoneHeight * 0.2,
-        width:PhoneWidth * 0.5,
+        height: PhoneHeight * 0.18,
+        width:PhoneWidth * 0.38,
         backgroundColor: 'transparent',
-        marginRight: 25,
+        marginRight: 10,
+        marginBottom: 10
     },
     serviceText: {
-        fontSize: 20,
-        fontWeight: '500',
+        fontSize: 15,
+        fontWeight: '400',
         color: 'black',
         textAlign: 'left',
     },

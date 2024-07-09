@@ -6,30 +6,38 @@ export default StyleSheet.create({
        flex: 1,
       },
       subContainer: {
-        height: PhoneHeight * 0.9,
-        width: PhoneWidth,
-        backgroundColor:'white'
+        backgroundColor:'white',
+        flex: 1
       },
       headerContainer:{
+        borderWidth: 0, 
         height: PhoneHeight * 0.15,
         width: PhoneWidth,
-        backgroundColor: 'white',
+        backgroundColor: '#ebedeb',
         justifyContent: 'center',
         alignItems: 'center',
       },
       headerText: {
-        fontSize: 45,
+        fontSize: 25,
         marginBottom: PhoneHeight * 0.01,
-        fontWeight: '700',
+        fontWeight: '500',
         color:'black',
       },
-      searchBar:{
+      searchContainer: {
+        borderWidth: 0,
+        flexDirection: 'row',
         height: PhoneHeight * 0.05,
         width: PhoneWidth * 0.95,
-        padding: PhoneWidth * 0.02,
-        borderRadius: 10,
         backgroundColor:'#d7dade',
-        fontSize: 18,
+        borderRadius: 10,
+        alignItems:'center',
+        paddingHorizontal: 10
+      },
+      searchBar:{
+        width: '100%',
+        height :'100%',
+        padding: PhoneWidth * 0.02,
+        fontSize: 16,
         color:'black',
       },
       servicesContainer: {
