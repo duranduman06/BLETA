@@ -1,4 +1,4 @@
-import { SafeAreaView, TextInput, Text, View, FlatList, ScrollView } from 'react-native'
+import { SafeAreaView, TextInput, Text, View, FlatList} from 'react-native'
 import React from 'react'
 import styles from '../homePage/styles'
 import ServiceCategory from '../../components/ServiceCategory';

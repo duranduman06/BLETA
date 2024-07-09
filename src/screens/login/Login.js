@@ -1,0 +1,67 @@
+import { Text, View, SafeAreaView, TextInput, TouchableOpacity } from 'react-native'
+import React, {useState } from 'react'
+import styles from '../login/styles'
+import { useNavigation } from '@react-navigation/native';
+
+const Login = () => {
+    const [emailFocused, setEmailFocused] = useState(false);
+    const [passwordFocused, setPasswordFocused] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const [inputEmail, setInputEmail] = useState('');
+    const [inputPassword, setInputPassword] = useState('');
+    const [error, setError ] = useState('');
+    const navigation = useNavigation();
+
+    //TEMP DATA
+    const email = '1';
+    const password = '1234';
+    
+    const checkIfCredentialsCorrect = () => {
+        if ((email === inputEmail) && (password === inputPassword)){
+            setError('Succes!');
+            navigation.navigate('homePage');
+        }
+        else if(email !== inputEmail){
+            setError('Error! email or password is incorrect');
+        }
+    }
+
+    return (
+        <SafeAreaView style={styles.container}>
+            <View style={styles.subContainer}>
+                <View style={styles.credentialsContainer}>
+                    <Text style={styles.loginText}>Login to your Account</Text>
+                    <TextInput
+                        style={[styles.credentials, emailFocused && styles.focused]}
+                        placeholder='E-mail'
+                        onFocus={() => setEmailFocused(true)}
+                        onBlur={() => setEmailFocused(false)}
+                        onChangeText={text => setInputEmail(text)}
+                        value={inputEmail}
+                    />
+                    <TextInput
+                        style={[styles.credentials, passwordFocused && styles.focused]}
+                        placeholder='Enter your password'
+                        onFocus={() => setPasswordFocused(true)}
+                        onBlur={() => setPasswordFocused(false)}
+                        secureTextEntry={!showPassword}
+                        onChangeText={text => setInputPassword(text)}
+                        value={inputPassword}
+                    />
+                    <View style={styles.showPasswordContainer}>
+                        <TouchableOpacity style={styles.showPasswordButton} onPress={() => setShowPassword(!showPassword)}>
+                            <View style={showPassword ? styles.showPasswordDot : styles.dontShowPasswordDot} />
+                        </TouchableOpacity>
+                        <Text style={showPassword ? styles.showPasswordText : styles.dontShowPasswordText} >show my password</Text>
+                    </View>
+                    <TouchableOpacity style={styles.loginButton} onPress={checkIfCredentialsCorrect}>
+                        <Text style={styles.loginButtonText}>Login</Text>
+                    </TouchableOpacity>
+                    {error ? <Text style={styles.errorText}>{error}</Text> : null}
+                </View>
+            </View>
+        </SafeAreaView>
+    )
+}
+
+export default Login
