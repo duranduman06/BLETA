@@ -1,7 +1,9 @@
-import { SafeAreaView, TextInput, Text, View, FlatList} from 'react-native'
+import { SafeAreaView, TextInput, Text, View, FlatList, Image} from 'react-native'
 import React from 'react'
 import styles from '../homePage/styles'
 import ServiceCategory from '../../components/ServiceCategory';
+import { PhoneHeight } from '../../constants/config';
+import BottomBar from '../../components/BottomBar';
 
 const data = [ // ŞİMDİLİK KULLANILACAK OLAN SABİT DATA
   {
@@ -83,11 +85,17 @@ export default function HomePage() {
     <SafeAreaView style={styles.container}>
       <View style={styles.subContainer}>
         <View style={styles.headerContainer}>
-          <Text style={styles.headerText}>BLETA</Text>
-          <TextInput
-            style={styles.searchBar}
-            placeholder="Which service do you need?"
-          />
+          <Text style={styles.headerText}>bleta</Text>
+          <View style = {styles.searchContainer}>
+            <Image 
+              style = {{width: 20, height: 20}}
+              source = {require('../../assets/icons/search.png')}/>
+            <TextInput
+              style={styles.searchBar}
+              placeholder=" Which service do you need?"
+              placeholderTextColor={'black'}
+            />
+          </View>
         </View>
         <View style={styles.servicesContainer}>
           <FlatList
@@ -97,6 +105,7 @@ export default function HomePage() {
           />
         </View>
       </View>
+      <BottomBar/>
     </SafeAreaView>
   )
 }

@@ -25,7 +25,8 @@ export default function MyAccount() {
             <View style={styles.textContainer}>
               <Text style={styles.myAccountText}>My Account</Text>
               <Text style={styles.descText}>
-                When you log in or create a new service request, you can edit your profile here.</Text>
+                When you log in or create a new service request, you can edit your profile here.
+              </Text>
             </View>
             <TouchableOpacity style={styles.loginButton} onPress={goToLogin}>
               <Text style={styles.loginText}>Login</Text>

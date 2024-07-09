@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
         marginHorizontal: PhoneWidth * 0.02,
     },
     categoryText: {
-        fontSize: 25,
-        fontWeight: 'bold',
+        fontSize: 20,
+        fontWeight: '500',
         color:'black',
-        marginBottom: 10,
+        marginBottom: PhoneHeight * 0.025
     },
     servicesScroll: {
         flexDirection: 'row',
