@@ -1,6 +1,5 @@
 import { StyleSheet} from 'react-native'
 import { PhoneWidth, PhoneHeight } from '../../constants/config'
-import { ServerContainer } from '@react-navigation/native'
 
 export default StyleSheet.create({
     container:{
@@ -9,6 +8,7 @@ export default StyleSheet.create({
       subContainer: {
         height: PhoneHeight * 0.9,
         width: PhoneWidth,
+        backgroundColor:'white'
       },
       headerContainer:{
         height: PhoneHeight * 0.15,
