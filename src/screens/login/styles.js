@@ -7,7 +7,7 @@ export default StyleSheet.create({
        flex: 1,
       },
       subContainer: {
-        height: PhoneHeight * 0.9,
+        flex: 1,
         width: PhoneWidth,
         backgroundColor:'white',
       },
