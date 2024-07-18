@@ -7,6 +7,7 @@ import MyWorkList from './src/screens/myWorkList/MyWorkList';
 import Notifications from './src/screens/notifications/Notifications';
 import MyAccount from './src/screens/myAccount/MyAccount';
 import Login from './src/screens/login/Login';
+import AccountInfos from './src/screens/accountInfos/AccountInfos';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,7 @@ const RouterComp = () => {
         <Stack.Screen name='notifications' options={{ headerShown: false,  animationEnabled:false}} component={Notifications} />
         <Stack.Screen name='myAccount' options={{ headerShown: false,  animationEnabled:false}} component={MyAccount} />
         <Stack.Screen name='login' options={{ headerShown: false}} component={Login} />
+        <Stack.Screen name='accountInfos' options={{ headerShown: false}} component={AccountInfos} />
       </Stack.Navigator>
     </NavigationContainer>
   )

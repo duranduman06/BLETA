@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Library 3 am.otf",
+      "sha1": "3a9801ff0959de5ff8f19df4185c7075a8f1989c"
+    },
+    {
+      "path": "src/assets/fonts/PJMasks-Bold.ttf",
+      "sha1": "65be86c359c3bc89d848556f5e7d17da07a9c84e"
+    },
+    {
+      "path": "src/assets/fonts/PJMasks-Regular.ttf",
+      "sha1": "b28b24642f6118fbb67ee0000e853aa003cef82f"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ import BottomBar from '../../components/BottomBar';
 export default function MyAccount() {
   const route = useRoute();
   const navigation = useNavigation();
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // useState(true);
 
   useEffect(() => {
     if (route.params?.isLoggedIn) {
@@ -44,8 +44,8 @@ export default function MyAccount() {
               </View>
 
               <View style={styles.accInfoContainer}>
-                <TouchableOpacity style={styles.accOption}>
-                  <Text style={styles.accInfoText}>Account Details</Text>
+                <TouchableOpacity style={styles.accOption} onPress={()=>navigation.navigate('accountInfos')}>
+                  <Text style={styles.accInfoText}>Account Informations</Text>
                   <Image
                     source={require('../../assets/icons/next.png')}
                     style={styles.leftArrow}
