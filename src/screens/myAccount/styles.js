@@ -58,7 +58,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   accNameText: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: '500',
     color: 'black',
   },
