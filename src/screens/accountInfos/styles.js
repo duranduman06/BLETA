@@ -118,8 +118,9 @@ export default StyleSheet.create({
     saveButton: {
         height: PhoneHeight * 0.06,
         width: PhoneWidth * 0.94,
-        backgroundColor: 'black',
+        backgroundColor: '#a800ff',
         borderWidth: 1,
+        borderColor:'#a800ff',
         borderRadius: PhoneWidth * 0.01,
         alignSelf: 'center',
         justifyContent: 'center',
@@ -127,7 +128,7 @@ export default StyleSheet.create({
     },
     saveButtonText: {
         fontSize: 18,
-        fontWeight: '400',
+        fontWeight: '500',
         color: 'white',
     },
     adressContainer: {
