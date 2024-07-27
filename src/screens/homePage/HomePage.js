@@ -85,7 +85,12 @@ export default function HomePage() {
     <SafeAreaView style={styles.container}>
       <View style={styles.subContainer}>
         <View style={styles.headerContainer}>
-          <Text style={styles.headerText}>bleta</Text>
+          <View style={styles.logoContainer}> 
+            <Image
+              style={styles.logoImg}
+              source={require('../../assets/icons/bleta_logo.png')} />
+            <Text style={styles.logoText}>bleta</Text>
+          </View>
           <View style = {styles.searchContainer}>
             <Image 
               style = {{width: 20, height: 20}}

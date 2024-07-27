@@ -19,7 +19,7 @@ const Login = () => {
     const checkIfCredentialsCorrect = () => {
         if ((email === inputEmail) && (password === inputPassword)){
             setError('Succes!');
-            navigation.navigate('homePage');
+            navigation.navigate('myAccount',{ isLoggedIn: true });
         }
         else if(email !== inputEmail){
             setError('Error! email or password is incorrect');

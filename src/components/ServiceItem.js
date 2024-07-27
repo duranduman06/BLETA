@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         width:PhoneWidth * 0.38,
         backgroundColor: 'transparent',
         marginRight: 10,
-        marginBottom: 10
+        marginBottom: 10,
     },
     serviceText: {
         fontSize: 15,
