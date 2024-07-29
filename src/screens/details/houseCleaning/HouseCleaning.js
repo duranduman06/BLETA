@@ -1,8 +1,11 @@
 import { Image, SafeAreaView, StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { PhoneHeight, PhoneWidth } from '../../../constants/config'
+import { useNavigation } from '@react-navigation/native'
+
 
 export default function HouseCleaning() {
+    const navigation = useNavigation();
     const commentData = [
         {
             customerName: "Paul Lee",
@@ -55,8 +58,10 @@ export default function HouseCleaning() {
             renderItem = {renderCommentBox}
         />
         </View>
-        <TouchableOpacity style = {styles.getServiceBtn}>
-            <Text style = {{color: 'white', fontSize: 14}}>GET 4 QUOTES</Text>
+        <TouchableOpacity 
+            onPress = {() => navigation.navigate('firstHouseCleaning') }
+            style = {styles.getServiceBtn}>
+            <Text style = {{color: 'white', fontSize: 18, fontWeight:'600'}}>GET 4 QUOTES</Text>
         </TouchableOpacity>
     </View>
 
@@ -113,7 +118,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         backgroundColor: '#b700ff',
         width: PhoneWidth * 0.9,
-        height: PhoneHeight * 0.05,
+        height: PhoneHeight * 0.075,
         alignItems: 'center',
         justifyContent:'center'
     }
