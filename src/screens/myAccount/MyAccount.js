@@ -21,7 +21,7 @@ export default function MyAccount() {
   };
 
   const goToLogin = () => {
-    navigation.navigate("login");
+    navigation.navigate("chooseLoginType");
   };
 
   const logOutFunc = () => {

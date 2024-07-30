@@ -1,4 +1,4 @@
-import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native'
+import { Text, View, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import styles from '../notifications/styles'
 import BottomBar from '../../components/BottomBar'
@@ -11,6 +11,11 @@ const Notifications = () => {
       <View style={styles.subContainer}>
         {/* IF THERE IS NO NOTIF SHOW THIS!!!!!!!!*/}
         <View style={styles.noNotifContainer}>
+          <View style={styles.logoContainer}>
+            <Image
+              style={styles.logoImg}
+              source={require('../../assets/icons/notification-bell.png')} />
+          </View>
           <View style={styles.noNotifBox}>
             <Text style={styles.title}>Notifications</Text>
             <Text style={styles.description}>

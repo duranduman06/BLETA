@@ -22,13 +22,14 @@ export default StyleSheet.create({
         borderRadius: PhoneWidth * 0.01,
         padding: 10,
         fontSize: 18,
+        fontFamily:'PJMasks-Regular',
         color: 'black',
         width: PhoneWidth * 0.8,
         height: PhoneHeight * 0.06,
       },
       loginText: {
         fontSize: 24,
-        fontWeight: '400',
+        fontFamily:'PJMasks-Bold',
         color: 'black',
         textAlign: 'center',
         marginBottom: PhoneHeight * 0.08,
@@ -62,17 +63,20 @@ export default StyleSheet.create({
       showPasswordText: {
         fontSize: 14,
         color:'black',
+        fontFamily:'PJMasks-Regular',
       },
       dontShowPasswordText: {
         fontSize: 14,
         color:'grey',
+        fontFamily:'PJMasks-Regular',
       },
       loginButton: {
         borderWidth:1,
+        borderColor:'#a800ff',
         height: PhoneHeight * 0.06,
         width: PhoneWidth * 0.8,
         borderRadius: PhoneWidth * 0.01,
-        backgroundColor:'black',
+        backgroundColor:'#a800ff',
         alignSelf:'center',
         justifyContent:'center',
         alignItems:'center',
@@ -80,12 +84,12 @@ export default StyleSheet.create({
       },
       loginButtonText: {
         fontSize: 18,
-        fontWeight:'400',
+        fontFamily: 'Library 3 am',
         color:'white',
       },
       errorText: {
         fontSize: 17,
-        fontWeight: '500',
+        fontFamily:'PJMasks-Regular',
         color:'grey',
         textAlign:'center',
 

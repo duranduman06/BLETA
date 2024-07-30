@@ -15,7 +15,7 @@ const Login = () => {
     //TEMP DATA
     const email = '1';
     const password = '1234';
-    
+
     const checkIfCredentialsCorrect = () => {
         if ((email === inputEmail) && (password === inputPassword)){
             setError('Succes!');
@@ -33,7 +33,7 @@ const Login = () => {
                     <Text style={styles.loginText}>Login to your Account</Text>
                     <TextInput
                         style={[styles.credentials, emailFocused && styles.focused]}
-                        placeholder='E-mail'
+                        placeholder='Enter your e-mail'
                         onFocus={() => setEmailFocused(true)}
                         onBlur={() => setEmailFocused(false)}
                         onChangeText={text => setInputEmail(text)}

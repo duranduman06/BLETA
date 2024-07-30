@@ -2,10 +2,12 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { PhoneHeight, PhoneWidth } from '../constants/config';
+import { useNavigation } from '@react-navigation/native';
 
 const ServiceItem = ({ service }) => {
+    const navigation = useNavigation();
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=> navigation.navigate(service.navigation)}>
             <View style={styles.serviceItem}>
                 <Image source={service.image} style={styles.serviceImage} resizeMode='cover' />
                 <Text style={styles.serviceText}>{service.serviceName}</Text>
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
     },
     serviceText: {
         fontSize: 15,
-        fontWeight: '400',
+        fontFamily: 'PJMasks-Regular',
         color: 'black',
         textAlign: 'left',
     },
@@ -34,5 +36,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '80%',
         borderRadius : 5,
+        marginBottom: 5,
     },
 });

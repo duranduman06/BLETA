@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     },
     categoryText: {
         fontSize: 20,
-        fontWeight: '500',
+        fontFamily: 'PJMasks-Bold',
         color:'black',
         marginBottom: PhoneHeight * 0.025
     },

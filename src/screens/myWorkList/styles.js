@@ -16,6 +16,15 @@ export default StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
+    logoContainer: {
+        width: '100%',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    logoImg: {
+        width: 120,
+        height: 120,
+    },
     noWorkListBox: {
         width: '100%',
         justifyContent: 'center',
@@ -24,13 +33,13 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: 22,
-        fontWeight: '700',
+        fontFamily: 'PJMasks-Bold',
         color: 'black',
         marginBottom: 15,
     },
     description: {
         fontSize: 16,
-        fontWeight: '500',
+        fontFamily: 'PJMasks-Regular',
         color: 'gray',
         textAlign: 'center',
         paddingHorizontal: PhoneWidth * 0.05,
@@ -41,7 +50,7 @@ export default StyleSheet.create({
     },
     loginText: {
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: 'PJMasks-Bold',
         textAlign: 'center',
         color: 'black',
     },
@@ -54,8 +63,8 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     getServiceText: {
-        fontSize: 16,
-        fontWeight: '500',
+        fontSize: 14,
+        fontFamily: 'Library 3 am',
         color: 'white',
         alignItems: 'center',
     },
@@ -90,13 +99,13 @@ export default StyleSheet.create({
     },
     unfocusCategoryText: {
         fontSize: 16,
-        fontWeight: '500',
+        fontFamily: 'PJMasks-Regular',
         color: 'gray',
         textAlign: 'center',
     },
     focusCategoryText: {
         fontSize: 16,
-        fontWeight: '500',
+        fontFamily: 'PJMasks-Regular',
         color: 'black',
         textAlign: 'center',
     },
@@ -119,7 +128,7 @@ export default StyleSheet.create({
     },
     oldWorkServiceName: {
         fontSize: 18,
-        fontWeight: '600',
+        fontFamily: 'PJMasks-Regular',
         color: 'black',
         paddingBottom: 5,
         borderBottomWidth: 1,
@@ -128,12 +137,12 @@ export default StyleSheet.create({
     },
     oldServiceGivenByText: {
         fontSize: 16,
-        fontWeight: '600',
+        fontFamily: 'PJMasks-Regular',
         color: 'gray',
     },
     oldWorkDateText: {
         fontSize: 16,
-        fontWeight: '500',
+        fontFamily: 'PJMasks-Regular',
         color: 'gray',
         marginTop: PhoneHeight * 0.005,
     },
@@ -170,18 +179,18 @@ export default StyleSheet.create({
     },
     workServiceName: {
         fontSize: 20,
-        fontWeight: '600',
+        fontFamily: 'PJMasks-Regular',
         color: 'black',
     },
     serviceGivenByText: {
         fontSize: 16,
-        fontWeight: '500',
+        fontFamily: 'PJMasks-Regular',
         color: 'black',
         marginTop: PhoneHeight * 0.005,
     },
     workDateText: {
         fontSize: 16,
-        fontWeight: '400',
+        fontFamily: 'PJMasks-Regular',
         color: 'gray',
         marginTop: PhoneHeight * 0.005,
         borderBottomWidth: 1,
@@ -191,16 +200,18 @@ export default StyleSheet.create({
     commentButton: {
         marginTop: PhoneHeight * 0.015,
         backgroundColor: '#a800ff',
-        paddingVertical: PhoneHeight * 0.015,
-        paddingHorizontal: PhoneWidth * 0.2,
         borderRadius: PhoneWidth * 0.01,
         justifyContent: 'center',
         alignItems: 'center',
+        height: PhoneHeight * 0.045,
+        width: PhoneWidth * 0.6,
+
     },
     commentButtonText: {
         width: '100%',
-        fontSize: 16,
-        fontWeight: '600',
+        textAlign: 'center',
+        fontSize: 12,
+        fontFamily: 'Library 3 am',
         color: 'white',
     },
     // WORKS STYLES END

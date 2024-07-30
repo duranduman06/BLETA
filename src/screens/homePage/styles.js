@@ -30,7 +30,7 @@ export default StyleSheet.create({
   logoText: {
     fontSize: 30,
     marginBottom: PhoneHeight * 0.01,
-    fontWeight: '500',
+    fontFamily: 'PJMasks-Bold',
     color: 'black',
     alignSelf:'flex-end',
   },
@@ -49,6 +49,7 @@ export default StyleSheet.create({
     height: '100%',
     padding: PhoneWidth * 0.02,
     fontSize: 16,
+    fontFamily: 'PJMasks-Regular',
     color: 'black',
   },
   servicesContainer: {
