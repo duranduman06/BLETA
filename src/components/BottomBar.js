@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     },
     txt: {
         color: 'black',
-        fontSize: 10
+        fontSize: 10,
+        fontFamily: 'PJMasks-Bold',
     }
 })

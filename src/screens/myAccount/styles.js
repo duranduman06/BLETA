@@ -20,7 +20,7 @@ export default StyleSheet.create({
   },
   myAccountText: {
     fontSize: 24,
-    fontWeight: '500',
+    fontFamily:'PJMasks-Bold',
     color: 'black',
     textAlign: 'center',
     marginBottom: 15,
@@ -28,24 +28,27 @@ export default StyleSheet.create({
   descText: {
     textAlign: 'center',
     fontSize: 17,
-    fontWeight: '400',
+    fontFamily:'PJMasks-Regular',
     marginBottom: 40,
   },
   loginText: {
     color: 'black',
     fontSize: 17,
-    fontWeight: '600',
+    fontFamily:'PJMasks-Bold',
     marginBottom: 20,
   },
   getServiceButton: {
-    backgroundColor: 'black',
-    paddingVertical: PhoneWidth * 0.02,
-    paddingHorizontal: PhoneHeight * 0.02,
-    borderRadius: PhoneWidth * 0.02,
+    backgroundColor: '#a800ff',
+    height: PhoneHeight * 0.045,
+    width: PhoneWidth * 0.3,
+    borderRadius: PhoneWidth * 0.01,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   getServiceText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 14,
+    fontFamily: 'Library 3 am',
   },
   accountContainer: {
     flex: 1,
@@ -59,7 +62,7 @@ export default StyleSheet.create({
   },
   accNameText: {
     fontSize: 22,
-    fontWeight: '500',
+    fontFamily:'PJMasks-Bold',
     color: 'black',
   },
   accInfoContainer: {
@@ -78,13 +81,13 @@ export default StyleSheet.create({
   },
   accInfoHeader: {
     fontSize: 20,
-    fontWeight: '500',
+    fontFamily:'PJMasks-Bold',
     color: 'black',
   },
   accInfoText: {
     flex: 1,
     fontSize: 16,
-    fontWeight: '400',
+    fontFamily:'PJMasks-Regular',
     color: 'black',
   },
   leftArrow: {

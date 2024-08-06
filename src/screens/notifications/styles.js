@@ -8,8 +8,16 @@ export default StyleSheet.create({
     subContainer: {
         backgroundColor: 'white',
         flex: 1,
-
     },
+    logoContainer: {
+        width: '100%',
+        justifyContent:'flex-end',
+        alignItems:'center',
+      },
+      logoImg: {
+        width: 120,
+        height: 120,
+      },
     noNotifContainer: {
         flex:1,
         backgroundColor: 'white',
@@ -24,13 +32,13 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: 22,
-        fontWeight: '700',
+        fontFamily:'PJMasks-Bold',
         color:'black',
         marginBottom: 15,
     },
     description: {
         fontSize: 16,
-        fontWeight: '500',
+        fontFamily:'PJMasks-Regular',
         color:'gray',
         textAlign:'center',
         paddingHorizontal: PhoneWidth * 0.05,
@@ -45,8 +53,8 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     getServiceText: {
-        fontSize: 16,
-        fontWeight: '500',
+        fontSize: 14,
+        fontFamily: 'Library 3 am',
         color:'white',
         alignItems:'center',
     },

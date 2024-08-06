@@ -81,12 +81,17 @@ const MyWorkList = () => {
           <>
             {/* NO WORK LIST START */}
             <View style={styles.noWorkListContainer}>
+              <View style={styles.logoContainer}>
+                <Image
+                  style={styles.logoImg}
+                  source={require('../../assets/icons/work-order.png')} />
+              </View>
               <View style={styles.noWorkListBox}>
                 <Text style={styles.title}>Work List</Text>
                 <Text style={styles.description}>
                   After the service request is created, you can follow it from this screen.
                 </Text>
-                <TouchableOpacity style={styles.goToLoginBox} onPress={() => navigation.navigate('login')}>
+                <TouchableOpacity style={styles.goToLoginBox} onPress={() => navigation.navigate('chooseLoginType')}>
                   <Text style={styles.loginText}> Login </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.getServiceButton} onPress={() => navigation.navigate('homePage')}>

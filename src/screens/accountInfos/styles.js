@@ -20,7 +20,7 @@ export default StyleSheet.create({
     headerText: {
         fontSize: 22,
         color: 'black',
-        fontWeight: '700',
+        fontFamily:'PJMasks-Bold',
     },
     allInfoContainer: {
         width: '100%',
@@ -34,7 +34,7 @@ export default StyleSheet.create({
         width: '100%',
         fontSize: 16,
         color: 'black',
-        fontWeight: '700',
+        fontFamily:'PJMasks-Bold',
         marginBottom: 10,
     },
     infoInput: {
@@ -45,8 +45,7 @@ export default StyleSheet.create({
         borderColor: 'gray',
         borderRadius: PhoneWidth * 0.02,
         fontSize: 16,
-        color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
     },
     infoInputFocus: {
         width: '100%',
@@ -57,7 +56,7 @@ export default StyleSheet.create({
         borderRadius: PhoneWidth * 0.02,
         fontSize: 16,
         color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
     },
     phoneBox: {
         justifyContent: 'space-around',
@@ -69,12 +68,12 @@ export default StyleSheet.create({
         backgroundColor: 'lightgray',
         fontSize: 16,
         color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
     },
     phoneText: {
         fontSize: 14,
         color: 'gray',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
     },
     checkBoxContainer: {
         width: '100%',
@@ -107,7 +106,7 @@ export default StyleSheet.create({
     checkBoxText: {
         fontSize: 14,
         color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
     },
     saveButtonContainer: {
         height: PhoneHeight * 0.1,
@@ -128,7 +127,7 @@ export default StyleSheet.create({
     },
     saveButtonText: {
         fontSize: 18,
-        fontWeight: '500',
+        fontFamily: 'Library 3 am',
         color: 'white',
     },
     adressContainer: {
@@ -143,7 +142,7 @@ export default StyleSheet.create({
         borderRadius: PhoneWidth * 0.02,
         fontSize: 16,
         color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -151,7 +150,7 @@ export default StyleSheet.create({
     optionTexts: {
         fontSize: 16,
         color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
     },
     modalOverlay: {
         flex: 1,
@@ -169,7 +168,7 @@ export default StyleSheet.create({
     options: {
         fontSize: 16,
         color: 'black',
-        fontWeight: '400',
+        fontFamily:'PJMasks-Regular',
         padding: 10,
         borderBottomWidth: 0.5,
         borderBottomColor:'gray',
