@@ -26,7 +26,7 @@ const FirstHouseCleaning = () => {
       <Text style={[
         styles.buttonText,
         { color: selectedIndex === index ? 'white' : 'black' },
-      ]}>{item}</Text>
+        ]}>{item}</Text>
     </TouchableOpacity>
   );
 
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
+
   },
   bottomBigBox: {
     borderWidth: 0,
@@ -109,7 +110,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 18,
     fontFamily: 'PJMasks-Regular',
-  },
+
   continueBox: {
     // other styles,
     borderWidth: 0,
@@ -130,6 +131,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: 'Library 3 am',
     color: 'white',
+
   }
 });
 

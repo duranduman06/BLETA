@@ -16,12 +16,12 @@ import CarpetCleaning from './src/screens/details/carpetCleaning/CarpetCleaning'
 import FridgeMoving from './src/screens/details/fridgeMoving/FridgeMoving';
 import SofaCleaning from './src/screens/details/sofaCleaning/SofaCleaning';
 import SofaMoving from './src/screens/details/sofaMoving/SofaMoving';
+
 const Stack = createStackNavigator();
 
 const RouterComp = () => {
   return (
     <NavigationContainer>
-
       <Stack.Navigator name='mainStack' initialRouteName='homePage'>
         <Stack.Screen name='homePage' options={{ headerShown: false, animationEnabled:false }} component={HomePage} />
         <Stack.Screen name='myWorkList' options={{ headerShown: false,  animationEnabled:false}} component={MyWorkList} />

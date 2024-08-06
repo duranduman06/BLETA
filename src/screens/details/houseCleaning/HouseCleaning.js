@@ -21,53 +21,51 @@ export default function HouseCleaning() {
     ]
     const renderCommentBox = ({item}) => {
         return(
-            <View style={styles.commentBox}>
+            <View style = {styles.commentBox}>
                 <Image
-                    style={styles.ratingImage}
+                    style = {styles.ratingImage}
                     source={require('../../../assets/icons/rating.png')}
                 />
-                <Text style={styles.customerName}>{item.customerName}</Text>
-                <Text style={styles.customerComment}>{item.commentTxt}</Text>
+                <Text style = {styles.customerName}>{item.customerName}</Text>
+                <Text style = {styles.customerComment}>{item.commentTxt}</Text>
             </View>
         )
     }
-    return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.imageBox}>
-                <Image
-                    style={styles.image}
-                    source={require('../../../assets/services/intercitymoving.jpg')}
-                />
-            </View>
-            <View style={styles.bottomBox}>
-                <View style={styles.infoBox}>
-                    <Text style={styles.title}>House Cleaning</Text>
-                    <View style={styles.line}></View>
-                    <Text style={styles.detailTxt}>7.148 house cleaners are ready!</Text>
-                    <View style={styles.line}></View>
-                    <Text style={styles.detailTxt}>4.5 avg. stars (347.579 approved comments)</Text>
-                    <View style={styles.line}></View>
-                    <Text style={styles.detailTxt}>158.100 people a year trust Bleta for house cleaning</Text>
-                    <View style={styles.line}></View>
-                </View>
-                <Text style={styles.commentTitle}>Customer Reviews</Text>
-                <View style={styles.commentListContainer}>
-                    <FlatList
-                        data={commentData}
-                        renderItem={renderCommentBox}
-                        keyExtractor={(item, index) => index.toString()}
-                    />
-                </View>
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity
-                        onPress={() => navigation.navigate('firstHouseCleaning')}
-                        style={styles.getServiceBtn}>
-                        <Text style={styles.getServiceTxt}>GET 4 QUOTES</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-        </SafeAreaView>
-    )
+  return (
+    <SafeAreaView style = {styles.container}>
+        <View style = {styles.imageBox}>
+            <Image
+            style = {styles.image}
+                source={require('../../../assets/services/cleaning.jpg')}
+            />
+        </View>
+    <View style = {styles.bottomBox}>
+        <View>
+        <Text style = {styles.title}>House Cleaning</Text>
+        <View style = {styles.line}></View>
+        <Text style = {styles.detailTxt}>7.148 house cleaners are ready!</Text>
+        <View style = {styles.line}></View>
+        <Text style = {styles.detailTxt}>4.5 avg. stars (347.579 approved comments)</Text>
+        <View style = {styles.line}></View>
+        <Text style = {styles.detailTxt}>158.100 people a year trust Bleta for house cleaning</Text>
+        <View style = {styles.line}></View>
+        </View>
+        <Text style = {styles.commentTitle}>Customer Reviews</Text>
+        <View style = {{height: PhoneHeight * 0.17}}>
+        <FlatList
+            data = {commentData}
+            renderItem = {renderCommentBox}
+        />
+        </View>
+        <TouchableOpacity 
+            onPress = {() => navigation.navigate('firstHouseCleaning') }
+            style = {styles.getServiceBtn}>
+            <Text style = {{color: 'white', fontSize: 18, fontWeight:'600'}}>GET 4 QUOTES</Text>
+        </TouchableOpacity>
+    </View>
+
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -138,7 +136,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingBottom: 20,
     },
+
     getServiceBtn: {
+        alignSelf: 'center',
         backgroundColor: '#b700ff',
         width: PhoneWidth * 0.9,
         height: PhoneHeight * 0.075,
