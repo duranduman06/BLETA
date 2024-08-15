@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { PhoneHeight, PhoneWidth } from '../../../constants/config';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
-const FirstHouseCleaning = () => {
+const SecondHouseCleaning = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const navigation = useNavigation();
+  const route = useRoute();
+
+  // Get data from the previous screen
+  const { houseSize } = route.params || {};
+
   const buttonData = [
-    '1+0', '1+1', '2+1', '3+1', '4+1', '5+1'
+    '1 Bathroom', '2 Bathrooms'
   ];
 
   const handlePress = (index) => {
@@ -16,11 +21,13 @@ const FirstHouseCleaning = () => {
 
   const handleContinue = () => {
     if (selectedIndex !== null) {
-      const selectedValue = buttonData[selectedIndex];
-      navigation.navigate('secondHouseCleaning', { houseSize: selectedValue });
+      const selectedBathroom = buttonData[selectedIndex];
+      navigation.navigate('thirdHouseCleaning', {
+        houseSize,
+        bathrooms: selectedBathroom,
+      });
     } else {
-      // Optional: Show an alert or message if no option is selected
-      alert('Please select a house size.');
+      alert('Please select the number of bathrooms.');
     }
   };
 
@@ -35,7 +42,7 @@ const FirstHouseCleaning = () => {
     >
       <Text style={[
         styles.buttonText,
-        { color: selectedIndex === index ? 'white' : 'black' },
+        { color: selectedIndex === index ? 'white' : 'black' }
       ]}>{item}</Text>
     </TouchableOpacity>
   );
@@ -43,15 +50,15 @@ const FirstHouseCleaning = () => {
   return (
     <SafeAreaView>
       <Text style={{ alignSelf: 'center', fontFamily: 'PJMasks-Bold' }}>House Cleaning</Text>
-      <View style={{ width: PhoneWidth * 0.14, height: 2.5, backgroundColor: 'purple', marginTop: 5 }}></View>
+      <View style={{ width: PhoneWidth * 0.28, height: 2.5, backgroundColor: 'purple', marginTop: 5 }}></View>
       <View style={styles.timePriceBox}>
         <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular' }}>4 Hours per week</Text>
         <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular' }}>$ 900</Text>
       </View>
       <View style={styles.bottomBigBox}>
-        <Text style={styles.titleBig}>How Big is Your House?</Text>
+        <Text style={styles.titleBig}>How Many Bathrooms?</Text>
         <Text style={styles.description}>
-          We clean and organize the house in detail. Within the scope of our services, cleaning the floor and windows, dusting, emptying the garbage, and kitchen cleaning using the materials at home.
+          We offer detailed cleaning for each bathroom. This includes scrubbing sinks, tubs, and toilets, cleaning mirrors, and ensuring that all surfaces are spotless. Our service also covers the cleaning of floors and tiles, and the removal of any soap scum or mildew.
         </Text>
         <FlatList
           data={buttonData}
@@ -141,4 +148,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FirstHouseCleaning;
+export default SecondHouseCleaning;

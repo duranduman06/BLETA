@@ -1,27 +1,16 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { PhoneHeight, PhoneWidth } from '../../../constants/config';
-import { useNavigation } from '@react-navigation/native';
 
-const FirstHouseCleaning = () => {
+const FirstCarpetCleaning = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const navigation = useNavigation();
+
   const buttonData = [
-    '1+0', '1+1', '2+1', '3+1', '4+1', '5+1'
+    'Pick up and deliver from address', 'Clean carpet at home', 'Clean carpet at office'
   ];
 
   const handlePress = (index) => {
     setSelectedIndex(index);
-  };
-
-  const handleContinue = () => {
-    if (selectedIndex !== null) {
-      const selectedValue = buttonData[selectedIndex];
-      navigation.navigate('secondHouseCleaning', { houseSize: selectedValue });
-    } else {
-      // Optional: Show an alert or message if no option is selected
-      alert('Please select a house size.');
-    }
   };
 
   const renderItem = ({ item, index }) => (
@@ -42,16 +31,16 @@ const FirstHouseCleaning = () => {
 
   return (
     <SafeAreaView>
-      <Text style={{ alignSelf: 'center', fontFamily: 'PJMasks-Bold' }}>House Cleaning</Text>
-      <View style={{ width: PhoneWidth * 0.14, height: 2.5, backgroundColor: 'purple', marginTop: 5 }}></View>
+      <Text style={{ alignSelf: 'center', fontFamily: 'PJMasks-Bold' }}>Carpet Cleaning</Text>
+      <View style={{ width: PhoneWidth * 0.2, height: 2.5, backgroundColor: 'purple', marginTop: 5 }}></View>
       <View style={styles.timePriceBox}>
-        <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular' }}>4 Hours per week</Text>
-        <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular' }}>$ 900</Text>
+        <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular', }}>4 Hours per week</Text>
+        <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular', }}>$ 200</Text>
       </View>
       <View style={styles.bottomBigBox}>
-        <Text style={styles.titleBig}>How Big is Your House?</Text>
+        <Text style={styles.titleBig}>Where would you like your carpet to be cleaned?</Text>
         <Text style={styles.description}>
-          We clean and organize the house in detail. Within the scope of our services, cleaning the floor and windows, dusting, emptying the garbage, and kitchen cleaning using the materials at home.
+          We offer comprehensive carpet cleaning services. Our services include pickup and delivery, home cleaning, and office cleaning, using high-quality materials and equipment.
         </Text>
         <FlatList
           data={buttonData}
@@ -61,7 +50,7 @@ const FirstHouseCleaning = () => {
         />
       </View>
       <View style={styles.continueBox}>
-        <TouchableOpacity style={styles.continueBtn} onPress={handleContinue}>
+        <TouchableOpacity style={styles.continueBtn}>
           <Text style={styles.continueBtnTxt}>Continue</Text>
         </TouchableOpacity>
       </View>
@@ -91,6 +80,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     width: PhoneWidth,
     height: PhoneHeight * 0.75,
+    borderColor: 'red',
     padding: 10,
   },
   titleBig: {
@@ -132,13 +122,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#b700ff',
     width: '90%',
     height: '80%',
-    borderRadius: 5,
+    fontFamily: 'PJMasks-Bold',
   },
   continueBtnTxt: {
     fontSize: 18,
     fontFamily: 'Library 3 am',
     color: 'white',
-  },
+  }
 });
 
-export default FirstHouseCleaning;
+export default FirstCarpetCleaning;

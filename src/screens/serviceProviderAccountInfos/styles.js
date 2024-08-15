@@ -1,0 +1,143 @@
+import { StyleSheet } from 'react-native'
+import { PhoneWidth, PhoneHeight } from '../../constants/config'
+
+
+export default StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    subContainer: {
+        flex: 1,
+        width: PhoneWidth,
+        backgroundColor: 'white',
+    },
+    headerContainer: {
+        width: '100%',
+        height: PhoneHeight * 0.15,
+        paddingHorizontal: PhoneWidth * 0.03,
+        justifyContent: 'center',
+    },
+    headerText: {
+        fontSize: 22,
+        color: 'black',
+        fontFamily:'PJMasks-Bold',
+    },
+    allInfoContainer: {
+        width: '100%',
+        paddingHorizontal: PhoneWidth * 0.03,
+    },
+    anInfoBox: {
+        width: '100%',
+        height: PhoneHeight * 0.12,
+    },
+    infoText: {
+        width: '100%',
+        fontSize: 16,
+        color: 'black',
+        fontFamily:'PJMasks-Bold',
+        marginBottom: 10,
+    },
+    infoInput: {
+        width: '100%',
+        height: PhoneHeight * 0.06,
+        paddingHorizontal: PhoneWidth * 0.04,
+        borderWidth: 0.5,
+        borderColor: 'gray',
+        borderRadius: PhoneWidth * 0.02,
+        fontSize: 16,
+        fontFamily:'PJMasks-Regular',
+    },
+    infoInputFocus: {
+        width: '100%',
+        height: PhoneHeight * 0.06,
+        paddingHorizontal: PhoneWidth * 0.04,
+        borderWidth: 2,
+        borderColor: 'gray',
+        borderRadius: PhoneWidth * 0.02,
+        fontSize: 16,
+        color: 'black',
+        fontFamily:'PJMasks-Regular',
+    },
+    phoneBox: {
+        justifyContent: 'space-around',
+        width: '100%',
+        height: PhoneHeight * 0.07,
+        paddingHorizontal: PhoneWidth * 0.03,
+        borderWidth: 0.5,
+        borderColor: 'lightgray',
+        backgroundColor: 'lightgray',
+        fontSize: 16,
+        color: 'black',
+        fontFamily:'PJMasks-Regular',
+    },
+    phoneText: {
+        fontSize: 14,
+        color: 'gray',
+        fontFamily:'PJMasks-Regular',
+    },
+    saveButtonContainer: {
+        height: PhoneHeight * 0.1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'white',
+    },
+    saveButton: {
+        height: PhoneHeight * 0.06,
+        width: PhoneWidth * 0.94,
+        backgroundColor: '#a800ff',
+        borderWidth: 1,
+        borderColor:'#a800ff',
+        borderRadius: PhoneWidth * 0.01,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    saveButtonText: {
+        fontSize: 18,
+        fontFamily: 'Library 3 am',
+        color: 'white',
+    },
+    adressContainer: {
+        width: '100%',
+        height: PhoneHeight * 0.12,
+    },
+    adressBox: {
+        height: PhoneHeight * 0.06,
+        paddingHorizontal: PhoneWidth * 0.04,
+        borderWidth: 0.5,
+        borderColor: 'gray',
+        borderRadius: PhoneWidth * 0.02,
+        fontSize: 16,
+        color: 'black',
+        fontFamily:'PJMasks-Regular',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    optionTexts: {
+        fontSize: 16,
+        color: 'black',
+        fontFamily:'PJMasks-Regular',
+    },
+    modalOverlay: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    modalContent: {
+        width: '60%',
+        maxHeight: '40%',
+        backgroundColor: 'white',
+        borderRadius: 10,
+        padding: 20,
+    },
+    options: {
+        fontSize: 16,
+        color: 'black',
+        fontFamily:'PJMasks-Regular',
+        padding: 10,
+        borderBottomWidth: 0.5,
+        borderBottomColor:'gray',
+    }
+})

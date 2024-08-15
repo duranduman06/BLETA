@@ -60,7 +60,7 @@ export default function HouseCleaning() {
                 </View>
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate('')}
+                        onPress={() => navigation.navigate('firstCarpetCleaning')}
                         style={styles.getServiceBtn}>
                         <Text style={styles.getServiceTxt}>GET 4 QUOTES</Text>
                     </TouchableOpacity>
