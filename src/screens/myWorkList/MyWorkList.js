@@ -31,7 +31,7 @@ const MyWorkList = () => {
     {
       id: 1,
       serviceName: 'Fridge Moving',
-      date: '30.07.2024',
+      date: '15.08.2024',
       serviceGivenBy: 'George Clinton',
       starOfServiceGiver: 4,
       image: require('../../assets/icons/user.png'),
@@ -39,7 +39,7 @@ const MyWorkList = () => {
     {
       id: 2,
       serviceName: 'Carpet Cleaning',
-      date: '30.07.2024',
+      date: '15.08.2024',
       serviceGivenBy: 'Adam Clinton',
       starOfServiceGiver: 3,
       image: require('../../assets/icons/user.png'),

@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { PhoneHeight, PhoneWidth } from '../../../constants/config';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
-const FirstHouseCleaning = () => {
+const SecondHouseCleaning = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const navigation = useNavigation();
+  const route = useRoute();
+
+  // Get data from the previous screen
+  const { houseSize, bathrooms } = route.params || {};
+
   const buttonData = [
-    '1+0', '1+1', '2+1', '3+1', '4+1', '5+1'
+    'Dog', 'Cat', "I don't have"
   ];
 
   const handlePress = (index) => {
@@ -16,11 +21,14 @@ const FirstHouseCleaning = () => {
 
   const handleContinue = () => {
     if (selectedIndex !== null) {
-      const selectedValue = buttonData[selectedIndex];
-      navigation.navigate('secondHouseCleaning', { houseSize: selectedValue });
+      const selectedPet = buttonData[selectedIndex];
+      navigation.navigate('fourthHouseCleaning', {
+        houseSize,
+        bathrooms,
+        pet: selectedPet,
+      });
     } else {
-      // Optional: Show an alert or message if no option is selected
-      alert('Please select a house size.');
+      alert('Please select a pet.');
     }
   };
 
@@ -35,7 +43,7 @@ const FirstHouseCleaning = () => {
     >
       <Text style={[
         styles.buttonText,
-        { color: selectedIndex === index ? 'white' : 'black' },
+        { color: selectedIndex === index ? 'white' : 'black' }
       ]}>{item}</Text>
     </TouchableOpacity>
   );
@@ -43,15 +51,15 @@ const FirstHouseCleaning = () => {
   return (
     <SafeAreaView>
       <Text style={{ alignSelf: 'center', fontFamily: 'PJMasks-Bold' }}>House Cleaning</Text>
-      <View style={{ width: PhoneWidth * 0.14, height: 2.5, backgroundColor: 'purple', marginTop: 5 }}></View>
+      <View style={{ width: PhoneWidth * 0.44, height: 2.5, backgroundColor: 'purple', marginTop: 5 }}></View>
       <View style={styles.timePriceBox}>
         <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular' }}>4 Hours per week</Text>
         <Text style={{ fontSize: 14, fontFamily: 'PJMasks-Regular' }}>$ 900</Text>
       </View>
       <View style={styles.bottomBigBox}>
-        <Text style={styles.titleBig}>How Big is Your House?</Text>
+        <Text style={styles.titleBig}>Do You Have Pets?</Text>
         <Text style={styles.description}>
-          We clean and organize the house in detail. Within the scope of our services, cleaning the floor and windows, dusting, emptying the garbage, and kitchen cleaning using the materials at home.
+          We offer thorough cleaning services to accommodate pets in your home. Whether you have a dog, cat, or both, we will ensure that our cleaning process addresses any pet-related messes. Please let us know so we can provide the best possible care for your home.
         </Text>
         <FlatList
           data={buttonData}
@@ -141,4 +149,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FirstHouseCleaning;
+export default SecondHouseCleaning;
